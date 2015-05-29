@@ -1,0 +1,16 @@
+machine("mm.runeverything",
+    displayName:"[MM] Run Everything",
+    author:"Adam Maxwell",
+    description: "Runs all the BSides London transforms") {
+
+    start {
+        run("mm.getipv4")
+        paths {
+            run("mm.getASN")
+            run("mm.getDomains")
+        }
+        run("mm.getEmails")
+
+
+    }
+}
